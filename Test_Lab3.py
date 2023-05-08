@@ -28,3 +28,18 @@ def test_bubble_sort_invalid():
     result = Lab3.bubble_sort(input_arr, 3)
 
     assert (result == [])
+
+def test_bubblesort_more10():
+    input_arr = [64, 54, 4, 3, 2, 5, 6, 7, 8, 9, 1, 2]
+    result = Lab3.bubble_sort(input_arr, Lab3.SORT_DESCENDING)
+    assert (result == 1)
+
+def test_bubblesort_nonum():
+    input_arr = []
+    result = Lab3.bubble_sort(input_arr, Lab3.SORT_DESCENDING)
+    assert (result == 0)
+
+def test_bubblesort_notint():
+    input_arr = ["apple", "pear"]
+    result = Lab3.bubble_sort(input_arr, Lab3.SORT_DESCENDING)
+    assert (result == 2)
