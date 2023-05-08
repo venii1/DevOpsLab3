@@ -1,0 +1,3 @@
+[submodule "Lab2_bmi"]
+	path = Lab2_bmi
+	url = https://github.com/venii1/Lab2_bmi.git
