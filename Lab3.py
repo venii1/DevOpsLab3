@@ -16,7 +16,7 @@ def bubble_sort(arr, sorting_order):
         if type(s) is not int:
             return 2
 
-    if arr == []:
+    if n==0:
         return 0
 
     if n < 10:
