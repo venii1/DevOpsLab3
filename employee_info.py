@@ -16,7 +16,6 @@ def get_employees_by_age_range(age_lower_limit, age_upper_limit):
     for item in employee_data:
         if int(item["age"]) > int(age_lower_limit) and int(item["age"]) < int(age_upper_limit):
             result.append(item)
-
     return result
 
 
@@ -35,7 +34,7 @@ def get_employees_by_dept(department):
     result = []
     for x in employee_data:
         if department == x["department"]:
-            result.append(x["name"])
+            result.append(x)
     print("The employees are: ", result)
     return result
 
@@ -63,7 +62,6 @@ def display_main_menu():
     print("3 - Display employee within age range")
     print("4 - Display employee in a department")
 
-
     print("Q - Quit")
 
     option = input("Enter selection =>")
@@ -77,10 +75,9 @@ def display_main_menu():
 
     elif option == '3':
         age_lower_limit = input("age (Lower Limit) = ")
-        age_upper_limit = input("age (Uper Limit) = ")
+        age_upper_limit = input("age (Upper Limit) = ")
         employee_info = get_employees_by_age_range(age_lower_limit, age_upper_limit)
         display_records(employee_info)
-
 
     elif option == '4':
         department = input("Name of Department = ")
